@@ -8,7 +8,6 @@ on:
 
 jobs:
   test:
-    continue-on-error: true
     strategy:
       matrix:
         os: [ ubuntu-20.04, macos-11, windows-2019 ]
@@ -47,3 +46,4 @@ jobs:
         with:
           working-directory: ./test/window-integration-tests
           run: npm cit
+        continue-on-error: true
